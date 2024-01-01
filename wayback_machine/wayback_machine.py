@@ -12,11 +12,10 @@ class WaybackMachine:
         '''
         https://web.archive.org/web/*/https://www.baka-tsuki.org/project/index.php?title=High_School_DxD
         '''
-    def get_snapshots(self, url='https://www.baka-tsuki.org/project/index.php?title=High_School_DxD'):
+    def get_snapshots(self, url):
         request_url = self.DOMAIN_URL+'*/'+url
         # url = 'https://web.archive.org/web/*/https://www.baka-tsuki.org/project/index.php?title=High_School_DxD'
         def _find_snapshots(self, request_url):
-            DOMAIN_URL = 'https://www.baka-tsuki.org/project/index.php?title=High_School_DxD'
             options = Options()
             driver = webdriver.Chrome(options=options)
             driver.get(request_url)
